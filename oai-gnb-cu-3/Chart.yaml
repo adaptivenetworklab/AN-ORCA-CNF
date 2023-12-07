@@ -20,7 +20,7 @@
 ################################################################################
 
 apiVersion: v2
-name: oai-gnb-cu
+name: oai-gnb-cu-3
 description: A Helm chart for gnb-cu network function
 
 # A chart can be either an 'application' or a 'library' chart.

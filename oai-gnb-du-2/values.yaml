@@ -19,7 +19,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "oai-gnb-du-sa"
+  name: "oai-gnb-du-sa-2"
 
 
 # oai-gnb-du helm-charts can be used in RFSimulated mode which does not require multiple interaces. 
@@ -30,15 +30,15 @@ multus:
   # if default gatway is left blank then it will be removed
   defaultGateway: ""
   f1Interface:
-    create: false
-    IPadd: "172.21.16.100"
+    create: true
+    IPadd: "172.21.16.101"
     Netmask: "22"
     # #name inside the pod is hardcoded right now
     # name: "f1"
     # if gatway is empty then it will be removed
     #Gateway: "172.21.7.254"
     #routes: [{'dst': '10.8.0.0/24','gw': '172.21.7.254'}, {'dst': '10.9.0.0/24','gw': '172.21.7.254'}]
-    hostInterface: "bond0"      # Interface of the host machine on which this pod will be scheduled
+    hostInterface: "ens33"      # Interface of the host machine on which this pod will be scheduled
   ruInterface:            #Only needed if using a ethernet based RU/USRP
     create: false
     IPadd: "192.168.80.90"
@@ -56,11 +56,11 @@ multus:
 # Example config files --> https://gitlab.eurecom.fr/oai/openairinterface5g/-/tree/develop/targets/PROJECTS/GENERIC-NR-5GC/CONF 
 config:
   mountConfig: false          #If config file is mounted then please edit mount.conf in templates/configmap.yaml properly 
-  timeZone: "Europe/Paris"
+  timeZone: "Asia/Jakarta"
   useAdditionalOptions: "--sa --rfsim --log_config.global_log_options level,nocolor,time"
   rfSimulator: "server"       #If you are not using in RFsimulator mode then you can leave this empty
   # If mounting the configuration file then below parameters are not used
-  gnbduName: "oai-du-rfsim"
+  gnbduName: "oai-du-rfsim-2"
   useSaTDDdu: "yes"
   mcc: "001"   # check the information with AMF, SMF, UPF/SPGWU
   mnc: "01"    # check the information with AMF, SMF, UPF/SPGWU
