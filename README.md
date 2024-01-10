@@ -14,7 +14,7 @@ Open Netra, standing for Open Network Training, is a comprehensive solution desi
     * Clone Core 5G Repository 
     
         ```
-        git clone https://gitlab.hhi.fraunhofer.de/wn-ina/oai-k8s.git
+        git clone https://github.com/adaptivenetworklab/AN-OPEN-NETRA-VNF
         ```
     * Create Namespace named `oai`
         ```
