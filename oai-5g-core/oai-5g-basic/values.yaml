@@ -12,7 +12,7 @@ mysql:
     - name: "regcred"
   persistence:
     enabled: true
-oai-nrf:hel
+oai-nrf:
   enabled: true
   kubernetesType: Vanilla #Openshift/Vanilla Vanilla for Upstream Kubernetes
   nfimage:  # image name either locally present or in a public/private repository
