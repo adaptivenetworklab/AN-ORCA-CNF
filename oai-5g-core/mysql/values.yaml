@@ -41,7 +41,7 @@ mysqlDatabase: oai_db
 
 #### added to handle two setting for oai database for mini and basic
 
-oai5gdatabase: basic #only two values mini or basic nothing else default is basic
+oai5gdatabase: mini #only two values mini or basic nothing else default is basic
 
 
 ## Specify an imagePullPolicy (Required)

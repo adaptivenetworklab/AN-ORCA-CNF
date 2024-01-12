@@ -7,7 +7,7 @@ global:
 mysql:
   enabled: true
   imagePullPolicy: IfNotPresent
-  oai5gdatabase: basic
+  oai5gdatabase: mini
   imagePullSecrets:
     - name: "regcred"
   persistence:
