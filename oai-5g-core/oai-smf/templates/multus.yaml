@@ -11,7 +11,7 @@ spec:
       "master": {{- cat .Values.multus.n4Interface.hostInterface | nospace | quote }},
       "mode": "bridge",
       "ipam": {
-        "type": "whereabouts",
+        "type": "static",
         "addresses": [
                 {
                         "address": {{- cat .Values.multus.n4Interface.Ipadd "/" .Values.multus.n4Interface.Netmask | nospace | quote }}

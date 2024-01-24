@@ -57,8 +57,8 @@ config:
   f1cuIpAddress: "status.podIP"   # if multus.f1Interface.create is true then use multus.f1Interface.Ipadd or multus.n2Interface.Ipadd if you are using only 1 extra interface
   ## Its the DU which communicates with the CU so no need for DU ip-address
   f1duIpAddress: "127.0.0.1"
-  f1cuPort: "2153"
-  f1duPort: "2153"
+  f1cuPort: "2152"
+  f1duPort: "2152"
 
 ## Debugging section
 podSecurityContext:

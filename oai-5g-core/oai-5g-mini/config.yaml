@@ -80,7 +80,7 @@ amf:
   amf_name: "OAI-AMF"
   # This really depends on if we want to keep the "mini" version or not
   support_features_options:
-    enable_simple_scenario: no # "no" by default with the normal deployment scenarios with AMF/SMF/UPF/AUSF/UDM/UDR/NRF.
+    enable_simple_scenario: yes # "no" by default with the normal deployment scenarios with AMF/SMF/UPF/AUSF/UDM/UDR/NRF.
                                # set it to "yes" to use with the minimalist deployment scenario (including only AMF/SMF/UPF) by using the internal AUSF/UDM implemented inside AMF.
                                # There's no NRF in this scenario, SMF info is taken from "nfs" section.
     enable_nssf: no

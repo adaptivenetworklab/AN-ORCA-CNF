@@ -77,8 +77,8 @@ config:
   n2IfName: "eth0"    # if multus.n2Interface.create is true then use n2
   n3IfName: "eth0"   #if multus.n3Interface.create is true then use n3 or you can only use 1 interface n2 or eth0 
   f1IfName: "eth0"   #if multus.f1Interface.create is true then use multus.f1Interface.Ipadd
-  f1cuPort: "2153"   #2153 if using same interface for f1 and n3 else standard port 2152 should be use if f1 and n3 interface are different
-  f1duPort: "2153"   #2153 if using same interface for f1 and n3 else standard port 2152 should be use if f1 and n3 interface are different
+  f1cuPort: "2152"   #2153 if using same interface for f1 and n3 else standard port 2152 should be use if f1 and n3 interface are different
+  f1duPort: "2152"   #2153 if using same interface for f1 and n3 else standard port 2152 should be use if f1 and n3 interface are different
 
 ## Debugging section
 podSecurityContext:

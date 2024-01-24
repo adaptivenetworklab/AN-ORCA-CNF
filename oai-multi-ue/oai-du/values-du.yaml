@@ -42,8 +42,8 @@ config:
   f1IfName: "eth0"                # f1 incase multus.f1Interface.create is true
   f1cuIpAddress: ""     # replace this value with CU f1 ip-address or CU-CP F1C ip-address if not using multus
   f1duIpAddress: "status.podIP"    # 172.21.16.100 if using multus
-  f1cuPort: "2153"
-  f1duPort: "2153"
+  f1cuPort: "2152"
+  f1duPort: "2152"
   #Not mandatory (leave it as it is)
   amfIpAddress: "127.0.0.1"  # Not mandatory, you can leave it like this in coming release it will be removed
   gnbNgaIfName: "eth0"            

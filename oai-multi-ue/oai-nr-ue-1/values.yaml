@@ -31,7 +31,7 @@ multus:
   hostInterface: "ens33"
 
 config:
-  timeZone: "Europe/Paris"
+  timeZone: "Asia/Jakarta"
   rfSimServer: "oai-ran"    # ip-address of rfsim or service name oai-gnb or oai-du
   fullImsi: "001010000000100"       # make sure all the below entries are present in the subscriber database
   fullKey: "fec86ba6eb707ed08905757b1bb44b8f" 

@@ -11,7 +11,7 @@ spec:
       "master": {{- cat .Values.multus.n3Interface.hostInterface | nospace | quote }},
       "mode": "bridge",
       "ipam": {
-        "type": "whereabouts",
+        "type": "static",
         "addresses": [
                 {
                         "address": {{- cat .Values.multus.n3Interface.Ipadd "/" .Values.multus.n3Interface.Netmask | nospace | quote }}
@@ -36,7 +36,7 @@ spec:
       "master": {{- cat .Values.multus.n4Interface.hostInterface | nospace | quote }},
       "mode": "bridge",
       "ipam": {
-        "type": "whereabouts",
+        "type": "static",
         "addresses": [
                 {
                         "address": {{- cat .Values.multus.n4Interface.Ipadd "/" .Values.multus.n4Interface.Netmask | nospace | quote }}
@@ -61,7 +61,7 @@ spec:
       "master": {{- cat .Values.multus.n6Interface.hostInterface | nospace | quote }},
       "mode": "bridge",
       "ipam": {
-        "type": "whereabouts",
+        "type": "static",
         "addresses": [
                 {
                         "address": {{- cat .Values.multus.n6Interface.Ipadd "/" .Values.multus.n6Interface.Netmask | nospace | quote }}

@@ -84,7 +84,7 @@ oai-amf:
     defaultGateway: ""
     n2Interface:
       create: true
-      Ipadd: "172.21.6.94"
+      Ipadd: "172.21.16.94"
       Netmask: "22"
       # #name inside the pod is hardcoded right now
       # name: "n2"
