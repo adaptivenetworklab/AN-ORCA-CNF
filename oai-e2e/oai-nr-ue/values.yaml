@@ -38,7 +38,7 @@ config:
   opc: "63bfa50ee6523365ff14c1f45f88737d"
   dnn: "oai"
   sst: "1"                     # configure according to gnb and amf, smf and upf 
-  sd: "FFFFFF"
+  sd: "ffffff"
   usrp: "rfsim"            # allowed rfsim, b2xx, n3xx, x3xx
   useAdditionalOptions: "--sa --rfsim -r 106 --numerology 1 -C 3619200000 --nokrnmod --log_config.global_log_options level,nocolor,time"
 
@@ -86,4 +86,4 @@ terminationGracePeriodSeconds: 0
 
 nodeSelector: {}
 
-nodeName: node3
+nodeName: node2

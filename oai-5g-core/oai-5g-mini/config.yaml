@@ -2,7 +2,7 @@
 
 # Log level for all the NFs
 log_level:
-  general: info
+  general: debug
 
 # If you enable registration, the other NFs will use the NRF discovery mechanism
 register_nf:
@@ -15,10 +15,10 @@ http_version: 2
 snssais:
   - &embb_slice1
     sst: 1
-    sd: FFFFFF
+    sd: ffffff
   - &embb_slice2
     sst: 1
-    sd: FFFFFF # in hex
+    sd: ffffff # in hex
 
 ############## SBI Interfaces
 ### Each NF takes its local SBI interfaces and remote interfaces from here, unless it gets them using NRF discovery mechanisms
@@ -30,7 +30,7 @@ nfs:
       api_version: v1
       interface_name: eth0
     n2:
-      interface_name: eth0
+      interface_name: n2
       port: 38412
   smf:
     host: oai-smf
@@ -39,7 +39,7 @@ nfs:
       api_version: v1
       interface_name: eth0
     n4:
-      interface_name: eth0
+      interface_name: n4
       port: 8805
   upf:
     host: oai-upf
@@ -48,15 +48,15 @@ nfs:
       api_version: v1
       interface_name: eth0
     n3:
-      interface_name: eth0
+      interface_name: n3
       port: 2152
     n4:
-      interface_name: eth0
+      interface_name: n4
       port: 8805
     n6:
-      interface_name: eth0
+      interface_name: n6
     n9:
-      interface_name: eth0
+      interface_name: n9
       port: 2152
   nrf:
     host: oai-nrf
@@ -141,9 +141,9 @@ smf:
     - single_nssai: *embb_slice1
       dnn: "oai"
       qos_profile:
-        5qi: 5
-        session_ambr_ul: "200Mbps"
-        session_ambr_dl: "400Mbps"
+        5qi: 6
+        session_ambr_ul: "1000Mbps"
+        session_ambr_dl: "1.00Mbps"
     - single_nssai: *embb_slice2
       dnn: "ims"
       qos_profile:
