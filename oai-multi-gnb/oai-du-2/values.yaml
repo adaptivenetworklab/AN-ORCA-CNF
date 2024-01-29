@@ -19,7 +19,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "oai-du-sa-3"
+  name: "oai-du-sa"
 
 
 # oai-du helm-charts can be used in RFSimulated mode which does not require multiple interaces. 
@@ -58,14 +58,14 @@ config:
   mountConfig: true          #If config file is mounted then please edit mount.conf in templates/configmap.yaml properly 
   timeZone: "Asia/Jakarta"
   useAdditionalOptions: "--sa --rfsim -r 106 --numerology 1 -C 3619200000 --nokrnmod --log_config.global_log_options level,nocolor,time"
-  duName: "oai-du-rfsim-3"
-  mcc: "001"   # check the information with AMF, SMF, UPF
-  mnc: "01"    # check the information with AMF, SMF, UPF
-  tac: "0x0001"     # check the information with AMF
+  duName: "oai-du-rfsim"
+  mcc: "208"   # check the information with AMF, SMF, UPF
+  mnc: "95"    # check the information with AMF, SMF, UPF
+  tac: "0xa001"     # check the information with AMF
   sst: "1"  #currently only 4 standard values are allowed 1,2,3,4
   usrp: rfsim   #allowed values rfsim, b2xx, n3xx or x3xx
-  f1IfName: "eth0"   #if multus.f1Interface.create is true then use f1
-  cuHost: "10.233.71.19" ## Ip-address or hostname
+  f1IfName: "f1"   #if multus.f1Interface.create is true then use f1
+  cuHost: "172.21.16.92" ## Ip-address or hostname
   f1cuPort: "2152"   #2153 if using same interface for f1 and n3 else standard port 2152 should be use if f1 and n3 interface are different
   f1duPort: "2152"   #2153 if using same interface for f1 and n3 else standard port 2152 should be use if f1 and n3 interface are different
 
@@ -118,4 +118,4 @@ terminationGracePeriodSeconds: 5
 
 nodeSelector: {}
 
-nodeName: 
+nodeName: node3

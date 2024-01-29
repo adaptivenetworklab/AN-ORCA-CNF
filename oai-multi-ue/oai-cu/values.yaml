@@ -69,14 +69,14 @@ config:
   useAdditionalOptions: "--sa --log_config.global_log_options level,nocolor,time"
   # If mounting the configuration file then below parameters are not used
   cuName: "oai-cu"
-  mcc: "001"   # check the information with AMF, SMF, UPF
-  mnc: "01"    # check the information with AMF, SMF, UPF
-  tac: "0x0001"     # check the information with AMF
+  mcc: "208"   # check the information with AMF, SMF, UPF
+  mnc: "95"    # check the information with AMF, SMF, UPF
+  tac: "0xa001"     # check the information with AMF
   sst: "1"  #currently only 4 standard values are allowed 1,2,3,4
-  amfhost: "10.233.71.10"  # amf ip-address or service-name oai-amf-svc or 172.21.6.94
-  n2IfName: "eth0"    # if multus.n2Interface.create is true then use n2
-  n3IfName: "eth0"   #if multus.n3Interface.create is true then use n3 or you can only use 1 interface n2 or eth0 
-  f1IfName: "eth0"   #if multus.f1Interface.create is true then use multus.f1Interface.Ipadd
+  amfhost: "172.21.6.94"  # amf ip-address or service-name oai-amf-svc or 172.21.6.94
+  n2IfName: "n2"    # if multus.n2Interface.create is true then use n2
+  n3IfName: "n3"   #if multus.n3Interface.create is true then use n3 or you can only use 1 interface n2 or eth0 
+  f1IfName: "f1"   #if multus.f1Interface.create is true then use multus.f1Interface.Ipadd
   f1cuPort: "2152"   #2153 if using same interface for f1 and n3 else standard port 2152 should be use if f1 and n3 interface are different
   f1duPort: "2152"   #2153 if using same interface for f1 and n3 else standard port 2152 should be use if f1 and n3 interface are different
 
@@ -130,4 +130,4 @@ terminationGracePeriodSeconds: 5
 
 nodeSelector: {}
 
-nodeName: 
+nodeName: node3

@@ -20,7 +20,7 @@
 ################################################################################
 
 apiVersion: v2
-name: oai-du-2
+name: oai-du
 description: A Helm chart for du network function
 
 # A chart can be either an 'application' or a 'library' chart.
