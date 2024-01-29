@@ -59,9 +59,9 @@ config:
   timeZone: "Asia/Jakarta"
   useAdditionalOptions: "--sa --rfsim -r 106 --numerology 1 -C 3619200000 --nokrnmod --log_config.global_log_options level,nocolor,time"
   duName: "oai-du-rfsim"
-  mcc: "001"   # check the information with AMF, SMF, UPF
-  mnc: "01"    # check the information with AMF, SMF, UPF
-  tac: "0x0001"     # check the information with AMF
+  mcc: "208"   # check the information with AMF, SMF, UPF
+  mnc: "95"    # check the information with AMF, SMF, UPF
+  tac: "0xa001"     # check the information with AMF
   sst: "1"  #currently only 4 standard values are allowed 1,2,3,4
   usrp: rfsim   #allowed values rfsim, b2xx, n3xx or x3xx
   f1IfName: "f1"   #if multus.f1Interface.create is true then use f1
@@ -118,4 +118,4 @@ terminationGracePeriodSeconds: 5
 
 nodeSelector: {}
 
-nodeName: node2
+nodeName: node3

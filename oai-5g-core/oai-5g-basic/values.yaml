@@ -12,6 +12,7 @@ mysql:
     - name: "regcred"
   persistence:
     enabled: true
+  nodeName: node3
 oai-nrf:
   enabled: true
   kubernetesType: Vanilla #Openshift/Vanilla Vanilla for Upstream Kubernetes
@@ -26,6 +27,7 @@ oai-nrf:
   config:
     logLevel: "debug"   #allowed info/error/debug
   nodeSelector: {}
+  nodeName: node3
 oai-udr:
   enabled: true
   kubernetesType: Vanilla #Openshift/Vanilla Vanilla for Upstream Kubernetes
@@ -40,6 +42,7 @@ oai-udr:
   config:
     logLevel: "debug"   #allowed info/error/debug
   nodeSelector: {}
+  nodeName: node3
 oai-udm:
   enabled: true
   kubernetesType: Vanilla #Openshift/Vanilla Vanilla for Upstream Kubernetes
@@ -54,6 +57,7 @@ oai-udm:
   config:
     logLevel: "debug"   #allowed info/error/debug
   nodeSelector: {}
+  nodeName: node3
 oai-ausf:
   enabled: true
   kubernetesType: Vanilla #Openshift/Vanilla Vanilla for Upstream Kubernetes
@@ -68,6 +72,7 @@ oai-ausf:
   config:
     logLevel: "debug"   #allowed info/error/debug
   nodeSelector: {}
+  nodeName: node3
 oai-amf:
   enabled: true
   kubernetesType: Vanilla #Openshift/Vanilla Vanilla for Upstream Kubernetes
@@ -84,16 +89,17 @@ oai-amf:
     defaultGateway: ""
     n2Interface:
       create: true
-      Ipadd: "172.21.16.94"
+      Ipadd: "172.21.6.94"
       Netmask: "22"
       # #name inside the pod is hardcoded right now
       # name: "n2"
       ## If you do not have a gateway leave the field empty
-      Gateway: ""
+      Gateway: 
       ## If you do not want to add any routes in your pod then leave this field empty
-      routes: ""
+      routes: 
       hostInterface: "ens33" # Interface of the host machine on which this pod will be scheduled
   nodeSelector: {}
+  nodeName: node3
 oai-upf:
   enabled: true
   kubernetesType: Vanilla #Openshift/Vanilla Vanilla for Upstream Kubernetes
@@ -118,9 +124,9 @@ oai-upf:
       # #name inside the pod is hardcoded right now
       # name: "n3"
       ## If you do not have a gateway leave the field empty
-      Gateway: ""
+      Gateway: 
       ## If you don't want to add a default route in your pod then replace this field with ""
-      routes: ""
+      routes: 
       hostInterface: "ens33"
     ## For n4 it is better to re-use eth0 interface inside the pod (primary CNI of Kubernetes)
     n4Interface:
@@ -130,9 +136,9 @@ oai-upf:
       # #name inside the pod is hardcoded right now
       # name: "n4"
       ## If you do not have a gateway leave the field empty
-      Gateway: ""
+      Gateway: 
       ## If you do not want to add any routes in your pod then leave this field empty
-      routes: ""
+      routes: 
       hostInterface: "ens33"
     n6Interface:
       create: true
@@ -141,12 +147,13 @@ oai-upf:
       # name: "n6"
       Netmask: "24"
       ## If you do not have a gateway leave the field empty
-      Gateway: ""
+      Gateway: 
       ## If you do not want to add any routes in your pod then leave this field empty
-      routes: ""
+      routes: 
       hostInterface: "ens33"
   #NOTE: If the interface you selected for n6If is wrong then traffic will not be routed towards internet
   nodeSelector: {}
+  nodeName: node3
 # oai-traffic-server:
 #  enabled: false
 #  weight: 6
@@ -162,7 +169,7 @@ oai-upf:
 #    IPadd: "172.21.6.99"
 #    Netmask: "22"
 #    defaultGateway: "172.21.7.254"
-#    hostInterface: "ens33"	# Interface of the host machine on which this pod will be scheduled
+# Interface of the host machine on which this pod will be scheduled
 #  config:
 #    ueroute: 12.1.1.0/24
 #    upfIpadd: 172.21.6.95
@@ -184,7 +191,7 @@ oai-smf:
       Ipadd: "192.168.24.3"
       Netmask: "24"
       ## If you do not have a gateway leave the field empty
-      Gateway: ""
+      Gateway: 
       ## If you do not want to add any routes in your pod then leave this field empty
       #routes: [{'dst': '10.8.0.0/24','gw': '172.21.7.254'}, {'dst': '10.9.0.0/24','gw': '172.21.7.254'}]
       hostInterface: "ens33"
@@ -192,3 +199,4 @@ oai-smf:
   imagePullSecrets:
     - name: "regcred"
   nodeSelector: {}
+  nodeName: node3

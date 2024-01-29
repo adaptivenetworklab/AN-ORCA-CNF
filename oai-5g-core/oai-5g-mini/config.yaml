@@ -89,15 +89,15 @@ amf:
   statistics_timer_interval: 20  # in seconds
   emergency_support: false
   served_guami_list:
-    - mcc: 001
-      mnc: 01
-      amf_region_id: 01
-      amf_set_id: 001
-      amf_pointer: 01
+    - mcc: 208
+      mnc: 95
+      amf_region_id: "FF"
+      amf_set_id: "2F1"
+      amf_pointer: "03"
   plmn_support_list:
-    - mcc: 001
-      mnc: 01
-      tac: 0x0001
+    - mcc: 208
+      mnc: 95
+      tac: 0xa001
       nssai:
         - *embb_slice1
         - *embb_slice2
@@ -112,7 +112,7 @@ amf:
 smf:
   ue_mtu: 1500
   support_features:
-    use_local_subscription_info: yes # Use infos from local_subscription_info or from UDM
+    use_local_subscription_info: no # Use infos from local_subscription_info or from UDM
     use_local_pcc_rules: yes # Use infos from local_pcc_rules or from PCF
   # we resolve from NRF, this is just to configure usage_reporting
   upfs:
@@ -169,7 +169,7 @@ upf:
 dnns:
   - dnn: "oai"
     pdu_session_type: "IPV4"
-    ipv4_subnet: "12.1.1.128/25"
+    ipv4_subnet: "12.1.1.0/24"
   - dnn: "ims"
     pdu_session_type: "IPV4V6"
     ipv4_subnet: "14.1.1.2/24"

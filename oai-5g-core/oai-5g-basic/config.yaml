@@ -15,6 +15,7 @@ http_version: 2
 snssais:
   - &embb_slice1
     sst: 1
+    sd: FFFFFF
   - &embb_slice2
     sst: 1
     sd: FFFFFF # in hex
@@ -29,7 +30,7 @@ nfs:
       api_version: v1
       interface_name: eth0
     n2:
-      interface_name: eth0
+      interface_name: n2
       port: 38412
   smf:
     host: oai-smf
@@ -38,7 +39,7 @@ nfs:
       api_version: v1
       interface_name: eth0
     n4:
-      interface_name: eth0
+      interface_name: n4
       port: 8805
   upf:
     host: oai-upf
@@ -47,15 +48,15 @@ nfs:
       api_version: v1
       interface_name: eth0
     n3:
-      interface_name: eth0
+      interface_name: n3
       port: 2152
     n4:
-      interface_name: eth0
+      interface_name: n4
       port: 8805
     n6:
-      interface_name: eth0
+      interface_name: n6
     n9:
-      interface_name: eth0
+      interface_name: n9
       port: 2152
   udm:
     host: oai-udm
@@ -106,15 +107,15 @@ amf:
   statistics_timer_interval: 20  # in seconds
   emergency_support: false
   served_guami_list:
-    - mcc: 001
-      mnc: 01
-      amf_region_id: 01
-      amf_set_id: 001
-      amf_pointer: 01
+    - mcc: 208
+      mnc: 95
+      amf_region_id: "FF"
+      amf_set_id: "2F1"
+      amf_pointer: "03"
   plmn_support_list:
-    - mcc: 001
-      mnc: 01
-      tac: 0x0001
+    - mcc: 208
+      mnc: 95
+      tac: 0xa001
       nssai:
         - *embb_slice1
         - *embb_slice2
