@@ -20,8 +20,8 @@
 ################################################################################
 
 apiVersion: v2
-name: oai-du-mue
-description: A Helm chart for du network function
+name: oai-nr-ue-mue
+description: A Helm chart for nr-ue network function
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -37,18 +37,18 @@ icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_fin
 
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
-version: 1.0.0
+version: 2.0.0
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application.
 appVersion: develop
 
 keywords:
-  - RF Simulator
-  - gNB
+  - RF_Simulator
+  - NR-UE
   - RAN
   - 5G
-  - DU
+  - USRP
 
 sources:
   - https://gitlab.eurecom.fr/oai/openairinterface5g

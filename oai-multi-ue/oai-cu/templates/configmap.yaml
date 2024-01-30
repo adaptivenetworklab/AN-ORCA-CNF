@@ -15,7 +15,7 @@ data:
       (
        {
           ////////// Identification parameters:
-          gNB_ID = 0xe01; ////////// Kalau bang nino: 0xe01
+          gNB_ID = 0xe09; ////////// Kalau bang nino: 0xe01
 
       #     cell_type =  "CELL_MACRO_GNB";
 

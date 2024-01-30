@@ -31,7 +31,7 @@ multus:
   defaultGateway: ""
   f1Interface:
     create: true
-    IPadd: "172.21.16.92"
+    IPadd: "172.21.16.102"
     Netmask: "22"
     # #name inside the pod is hardcoded right now
     # name: "f1"
@@ -41,7 +41,7 @@ multus:
     hostInterface: "ens33"      # Interface of the host machine on which this pod will be scheduled
   n2Interface:
     create: true
-    IPadd: "172.21.6.90"
+    IPadd: "172.21.6.80"
     #name inside the pod is hardcoded right now
     # name: "n2"
     Netmask: "22"
@@ -51,7 +51,7 @@ multus:
     hostInterface: "ens33"      # Interface of the host machine on which this pod will be scheduled
   n3Interface:
     create: true
-    IPadd: "172.21.8.91"
+    IPadd: "172.21.8.90"
     Netmask: "22"
     # #name inside the pod is hardcoded right now
     # name: "n3"

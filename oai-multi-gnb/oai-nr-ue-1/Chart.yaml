@@ -20,7 +20,7 @@
 ################################################################################
 
 apiVersion: v2
-name: oai-nr-ue
+name: oai-nr-ue-mue
 description: A Helm chart for nr-ue network function
 
 # A chart can be either an 'application' or a 'library' chart.
