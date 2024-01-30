@@ -34,7 +34,7 @@ Open Netra, standing for Open Network Training, is a comprehensive solution desi
         ```
     * Wait until all the pods are up and running 
 
-    ![image](https://hackmd.io/_uploads/r1rUlt1Y6.png)
+        ![image](https://hackmd.io/_uploads/r1rUlt1Y6.png)
 
 
 * **Configuring PhpMyAdmin for Subscriber Management**
@@ -49,7 +49,7 @@ Open Netra, standing for Open Network Training, is a comprehensive solution desi
         kubectl apply -f phypmyadmin/
         ```
     * PMA Dashboard
-    ![image](https://hackmd.io/_uploads/Syx8WFkYa.png)
+        ![image](https://hackmd.io/_uploads/Syx8WFkYa.png)
 
     
 ### 1.2 Setup OAI gNB-UE 🗼
