@@ -19,7 +19,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "oai-du-sa-2"
+  name: "oai-du-sa-1"
 
 
 # oai-du helm-charts can be used in RFSimulated mode which does not require multiple interaces. 
