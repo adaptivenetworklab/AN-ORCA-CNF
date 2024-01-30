@@ -24,7 +24,7 @@ imagePullSecrets:
 ## Change these ip-addresses according to your environment
 multus:
   create: true
-  ipadd: "172.21.16.27"  # subnet should be able to reach the gNB
+  ipadd: "172.21.16.41"  # subnet should be able to reach the gNB
   netmask: "22"
     # if default route is not needed then leave the field empty
   defaultGateway: ""

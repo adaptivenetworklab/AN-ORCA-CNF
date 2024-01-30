@@ -20,7 +20,6 @@ serviceAccount:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: "oai-cu-sa"
-
 # oai-cu can be configured with multiple interface which may correspond to 3GPP logical interfaces. There can be one to one or one to many. 
 # In case of one to one mapping f1, n2, n3 all can have seperate virtual interfaces. 
 # In one to many mapping f1,n2 and n3 all can be mapped to one virtual interface. 
@@ -31,7 +30,7 @@ multus:
   defaultGateway: ""
   f1Interface:
     create: true
-    IPadd: "172.21.16.92"
+    IPadd: "172.21.16.205"
     Netmask: "22"
     # #name inside the pod is hardcoded right now
     # name: "f1"
@@ -41,7 +40,7 @@ multus:
     hostInterface: "ens33"      # Interface of the host machine on which this pod will be scheduled
   n2Interface:
     create: true
-    IPadd: "172.21.6.90"
+    IPadd: "172.21.6.81"
     #name inside the pod is hardcoded right now
     # name: "n2"
     Netmask: "22"
@@ -51,7 +50,7 @@ multus:
     hostInterface: "ens33"      # Interface of the host machine on which this pod will be scheduled
   n3Interface:
     create: true
-    IPadd: "172.21.8.91"
+    IPadd: "172.21.8.80"
     Netmask: "22"
     # #name inside the pod is hardcoded right now
     # name: "n3"

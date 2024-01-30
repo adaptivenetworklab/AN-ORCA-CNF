@@ -31,7 +31,7 @@ multus:
   defaultGateway: ""
   f1Interface:
     create: true
-    IPadd: "172.21.16.202"
+    IPadd: "172.21.16.207"
     Netmask: "22"
     # #name inside the pod is hardcoded right now
     # name: "f1"
@@ -65,7 +65,7 @@ config:
   sst: "1"  #currently only 4 standard values are allowed 1,2,3,4
   usrp: rfsim   #allowed values rfsim, b2xx, n3xx or x3xx
   f1IfName: "f1"   #if multus.f1Interface.create is true then use f1
-  cuHost: "172.21.16.92" ## Ip-address or hostname
+  cuHost: "172.21.16.102" ## Ip-address or hostname
   f1cuPort: "2152"   #2153 if using same interface for f1 and n3 else standard port 2152 should be use if f1 and n3 interface are different
   f1duPort: "2152"   #2153 if using same interface for f1 and n3 else standard port 2152 should be use if f1 and n3 interface are different
 
