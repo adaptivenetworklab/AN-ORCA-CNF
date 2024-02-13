@@ -31,8 +31,8 @@ multus:
   defaultGateway: ""
   f1Interface:
     create: true
-    IPadd: "172.21.16.92"
-    Netmask: "22"
+    IPadd: "192.168.1.5"
+    Netmask: "27"
     # #name inside the pod is hardcoded right now
     # name: "f1"
     # if gatway is commented then it will be removed

@@ -19,7 +19,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "oai-du-sa"
+  name: "oai-du-sa-user2"
 
 
 # oai-du helm-charts can be used in RFSimulated mode which does not require multiple interaces. 
@@ -31,7 +31,7 @@ multus:
   defaultGateway: ""
   f1Interface:
     create: true
-    IPadd: "192.168.1.6"
+    IPadd: "192.168.1.33"
     Netmask: "27"
     # #name inside the pod is hardcoded right now
     # name: "f1"
@@ -65,7 +65,7 @@ config:
   sst: "1"  #currently only 4 standard values are allowed 1,2,3,4
   usrp: rfsim   #allowed values rfsim, b2xx, n3xx or x3xx
   f1IfName: "f1"   #if multus.f1Interface.create is true then use f1
-  cuHost: "192.168.1.5" ## Ip-address or hostname
+  cuHost: "192.168.1.32" ## Ip-address or hostname
   f1cuPort: "2152"   #2153 if using same interface for f1 and n3 else standard port 2152 should be use if f1 and n3 interface are different
   f1duPort: "2152"   #2153 if using same interface for f1 and n3 else standard port 2152 should be use if f1 and n3 interface are different
 

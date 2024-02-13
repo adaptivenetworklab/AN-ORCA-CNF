@@ -33,12 +33,12 @@ multus:
 config:
   timeZone: "Asia/Jakarta"
   rfSimServer: "172.21.16.201"    # ip-address of rfsim or service name oai-gnb or oai-du
-  fullImsi: "208950000000126"       # make sure all the below entries are present in the subscriber database
-  fullKey: "0C0A34601D4F07677303652C0462535B" 
-  opc: "63bfa50ee6523365ff14c1f45f88737d"
+  fullImsi: "208950000000128"       # make sure all the below entries are present in the subscriber database
+  fullKey: "491e953511a7ee9da2447033c856dd4f" 
+  opc: "5ecbb8c5659137c7f1dd4fb9c243af39"
   dnn: "oai"
   sst: "1"                     # configure according to gnb and amf, smf and upf 
-  sd: "FFFFFF"
+  sd: "FFFFFD"
   usrp: "rfsim"            # allowed rfsim, b2xx, n3xx, x3xx
   useAdditionalOptions: "--sa --rfsim -r 106 --numerology 1 -C 3619200000 --nokrnmod --log_config.global_log_options level,nocolor,time"
 
