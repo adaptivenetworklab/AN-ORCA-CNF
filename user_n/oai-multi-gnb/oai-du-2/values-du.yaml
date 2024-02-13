@@ -1,0 +1,96 @@
+kubernetesType: Vanilla 
+
+nfimage:   
+  repository: docker.io/oaisoftwarealliance/oai-gnb         
+  version: 2023.w19 
+  pullPolicy: IfNotPresent
+
+imagePullSecrets:
+  - name: "regcred"
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: "oai-gnb-du-sa"
+
+multus:
+  defaultGateway: ""
+  f1Interface:
+    create: true
+    IPadd: "172.21.16.100"
+    Netmask: "22"
+    hostInterface: "ens33"     
+  ruInterface:            #Gak dibutuhkan karena tidak pakai RU/USRP
+    create: false
+    IPadd: "192.168.80.90"
+    Netmask: "24"
+    hostInterface: "bond0"      
+
+config:
+  mountConfig: true          #
+  timeZone: "Asia/Jakarta"
+  useAdditionalOptions: "--sa --rfsim -r 106 --numerology 1 -C 3619200000 --nokrnmod --log_config.global_log_options level,nocolor,time"
+  rfSimulator: "server"      
+  gnbduName: "oai-du-rfsim-1"
+  useSaTDDdu: "yes"
+  mcc: "001"   # check the information with AMF, SMF, UPF/SPGWU
+  mnc: "01"    # check the information with AMF, SMF, UPF/SPGWU
+  mncLength: "2" # check the information with AMF, SMF, UPF/SPGWU
+  tac: "1"     # check the information with AMF
+  nssaiSst: "1"  #currently only 4 standard values are allowed 1,2,3,4
+  nssaiSd0: "ffffff"    #values in hexa-decimal format
+  f1IfName: "eth0"                # f1 incase multus.f1Interface.create is true
+  f1cuIpAddress: ""     # replace this value with CU f1 ip-address or CU-CP F1C ip-address if not using multus
+  f1duIpAddress: "status.podIP"    # 172.21.16.100 if using multus
+  f1cuPort: "2152"
+  f1duPort: "2152"
+  #Not mandatory (leave it as it is)
+  amfIpAddress: "127.0.0.1"  # Not mandatory, you can leave it like this in coming release it will be removed
+  gnbNgaIfName: "eth0"            
+  gnbNgaIpAddress: "status.podIP" 
+  gnbNguIfName: "eth0"   
+  gnbNguIpAddress: "status.podIP"
+
+
+## Debugging section
+podSecurityContext:
+  runAsUser: 0
+  runAsGroup: 0
+
+start:
+  gnbdu: true 
+  tcpdump: false
+
+includeTcpDumpContainer: true 
+
+tcpdumpimage:
+   repository: docker.io/corfr/tcpdump
+   version: latest
+   pullPolicy: IfNotPresent
+
+resources:
+  define: false
+  limits:
+    nf:
+      cpu: 2000m
+      memory: 2Gi
+    tcpdump:
+      cpu: 200m
+      memory: 128Mi
+  requests:
+    nf:
+      cpu: 2000m
+      memory: 2Gi
+    tcpdump:
+      cpu: 100m
+      memory: 128Mi
+
+tolerations: []
+
+affinity: {}
+
+terminationGracePeriodSeconds: 5
+
+nodeSelector: {}
+
+nodeName: 

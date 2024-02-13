@@ -1,0 +1,106 @@
+kubernetesType: Vanilla  
+nfimage: 
+  repository: docker.io/oaisoftwarealliance/oai-gnb      
+  version: 2023.w19 
+  pullPolicy: IfNotPresent
+
+imagePullSecrets:
+  - name: "regcred"
+  
+serviceAccount:
+  create: true
+  annotations: {}
+  name: "oai-gnb-cu-sa" # Ketika multiple user ini increase sesuai user contoh: oai-gnb-cu-sa-2
+
+multus:
+  defaultGateway: "" # Default Gateway Kosongin aja
+
+  f1Interface: # konfigurasi f1 interface
+    create: true # Diubah ke true, secara default false
+    IPadd: "172.21.16.92" # Diubah ke custom IP (harus satu subnet)
+    Netmask: "22" # Diubah ke custom netmask (harus satu subnet)
+    hostInterface: "ens33"    # Define host interface pod
+
+  n2Interface: # konfigurasi n2 interface
+    create: true # Diubah ke true, secara default false
+    IPadd: "172.21.6.90" # Diubah ke custom IP (harus satu subnet)
+    Netmask: "22" # Diubah ke custom netmask (harus satu subnet)
+    hostInterface: "ens33"     # Define host interface pod
+
+  n3Interface: # konfigurasi n3 interface
+    create: true  # Diubah ke true, secara default false
+    IPadd: "172.21.8.91" # Diubah ke custom IP (harus satu subnet)
+    Netmask: "22" # Diubah ke custom netmask (harus satu subnet)
+    hostInterface: "ens33"    # Define host interface pod
+    
+config:
+  mountConfig: true     # True aja karena config nya di mount     
+  timeZone: "Asia/Jakarta" # dijadiin aja jadi asia/jakarta sebelumnya paris
+  useAdditionalOptions: "--sa --log_config.global_log_options level,nocolor,time"
+  gnbcuName: "oai-cu-1" # Sesuaikan dengan nama nya
+  useSAcu: "yes"
+  mcc: "001"   # Yang bakal diubah user, tapi sekarang biarkan default 
+  mnc: "01"    # Yang bakal diubah user, tapi sekarang biarkan default 
+  mncLength: "2" # Yang bakal diubah user, tapi sekarang biarkan default 
+  tac: "1"     # Yang bakal diubah user, tapi sekarang biarkan default 
+  nssaiSst: "1"  # Yang bakal diubah user, tapi sekarang biarkan default 
+  nssaiSd0: "ffffff"    # Yang bakal diubah user, tapi sekarang biarkan default 
+ 
+  #entrypoint.sh tries to resolve the amfHost name if the resolution did not work gNB will not start
+
+  amfIpAddress: "oai-amf-svc"  # amf ip-address or service-name oai-amf-svc or 172.21.6.94
+  gnbNgaIfName: "eth0"            # if multus.n2Interface.create is true then use n2 
+  gnbNgaIpAddress: "status.podIP" # if multus.n2Interface.create is true then use multus.n2Interface.Ipadd 
+  gnbNguIfName: "eth0"   #if multus.n3Interface.create is true then use n3 or you can only use 1 interface n2 or eth0 
+  gnbNguIpAddress: "status.podIP" # if multus.n3Interface.create is true then use multus.n3Interface.Ipadd or multus.n2Interface.Ipadd if you are using only 1 extra interface
+  f1IfName: "eth0"                # if multus.f1Interface.create is true then use multus.f1Interface.Ipadd
+  f1cuIpAddress: "status.podIP"   # if multus.f1Interface.create is true then use multus.f1Interface.Ipadd or multus.n2Interface.Ipadd if you are using only 1 extra interface
+  ## Its the DU which communicates with the CU so no need for DU ip-address
+  f1duIpAddress: "127.0.0.1"
+  f1cuPort: "2152"
+  f1duPort: "2152"
+
+## Debugging section
+podSecurityContext:
+  runAsUser: 0
+  runAsGroup: 0
+
+start:
+  gnbcu: true 
+  tcpdump: false
+
+includeTcpDumpContainer: false 
+
+
+tcpdumpimage:
+   repository: docker.io/corfr/tcpdump
+   version: latest
+   pullPolicy: IfNotPresent
+
+resources:
+  define: false 
+  limits:
+    nf:
+      cpu: 100m
+      memory: 128Mi
+    tcpdump:
+      cpu: 100m
+      memory: 128Mi
+  requests:
+    nf:
+      cpu: 100m
+      memory: 128Mi
+    tcpdump:
+      cpu: 100m
+      memory: 128Mi
+
+
+tolerations: []
+
+affinity: {}
+
+terminationGracePeriodSeconds: 5
+
+nodeSelector: {}
+
+nodeName: 
