@@ -147,9 +147,11 @@ oai-upf:
       # name: "n6"
       Netmask: "24"
       ## If you do not have a gateway leave the field empty
-      Gateway: 
+      Gateway: "192.168.22.1"
       ## If you do not want to add any routes in your pod then leave this field empty
       routes: 
+        - dst: "0.0.0.0/0"
+          gw: "192.168.22.1"
       hostInterface: "ens33"
   #NOTE: If the interface you selected for n6If is wrong then traffic will not be routed towards internet
   nodeSelector: {}
