@@ -24,16 +24,16 @@ imagePullSecrets:
 ## Change these ip-addresses according to your environment
 multus:
   create: true
-  ipadd: "172.21.16.40"  # subnet should be able to reach the gNB
-  netmask: "22"
+  ipadd: "192.168.1.8"  # subnet should be able to reach the gNB
+  netmask: "28"
     # if default route is not needed then leave the field empty
   defaultGateway: ""
   hostInterface: "ens33"
 
 config:
   timeZone: "Asia/Jakarta"
-  rfSimServer: "172.21.16.207"    # ip-address of rfsim or service name oai-gnb or oai-du
-  fullImsi: "208950000000129"       # make sure all the below entries are present in the subscriber database
+  rfSimServer: "192.168.1.7"    # ip-address of rfsim or service name oai-gnb or oai-du
+  fullImsi: "208950000000033"       # make sure all the below entries are present in the subscriber database
   fullKey: "89ab3b477389667e6409d320dce1b380" 
   opc: "4c9c2cd1bc7347bde596c4e0d0393bd8"
   dnn: "oai"
