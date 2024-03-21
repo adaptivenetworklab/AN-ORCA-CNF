@@ -103,3 +103,20 @@ Open Netra, standing for Open Network Training, is a comprehensive solution desi
             3   0.000100 10.233.75.54 → 10.233.75.62 TCP 68 4043 → 44242 [ACK] Seq=1 Ack=64341 Win=16287 Len=0 TSval=1253996122 TSecr=2131950554
         ```
         </details>
+
+    * **Configuring PhpMyAdmin for Subscriber Management**
+        * Deploy the secret first
+    
+            ```
+            kubectl apply -f phypmyadmin/secret.yaml
+            ```
+        * Deploy the rest of the manifest
+    
+            ```
+            kubectl apply -f phypmyadmin/
+            ```
+        * PMA Dashboard
+            ![image](https://hackmd.io/_uploads/Syx8WFkYa.png)
+
+            Setup your custom credential in the core manifest configuration file.
+
