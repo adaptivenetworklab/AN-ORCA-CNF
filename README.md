@@ -104,19 +104,19 @@ Open Netra, standing for Open Network Training, is a comprehensive solution desi
         ```
         </details>
 
-    * **Configuring PhpMyAdmin for Subscriber Management**
-        * Deploy the secret first
+4. Configuring PhpMyAdmin for Subscriber Management
+    * Deploy the secret first
     
-            ```
-            kubectl apply -f phypmyadmin/secret.yaml
-            ```
-        * Deploy the rest of the manifest
+        ```
+        kubectl apply -f phypmyadmin/secret.yaml
+        ```
+    * Deploy the rest of the manifest
     
-            ```
-            kubectl apply -f phypmyadmin/
-            ```
-        * PMA Dashboard
-            ![image](https://hackmd.io/_uploads/Syx8WFkYa.png)
+        ```
+        kubectl apply -f phypmyadmin/
+        ```
+    * PMA Dashboard
+    ![image](https://hackmd.io/_uploads/Syx8WFkYa.png)
 
-            Setup your custom credential in the core manifest configuration file.
+        Setup your custom credential in the core manifest configuration file.
 
