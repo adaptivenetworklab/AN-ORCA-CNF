@@ -2,9 +2,6 @@
 
 As a VNF 5G Implementation Division on Kubernetes, I design and deploy high-performance OpenAirInterface (OAI) 5G use cases. I optimize network performance, ensure security integration, and collaborate on defining use cases. My focus is on automation for efficient seamless deployment 5G integration in Kubernetes environments.
 
-- **Table of Content**
-[ToC]
-
 ## OpenNetra: Description
 
 ![netra dash](https://hackmd.io/_uploads/Bk2avI4ST.jpg)
