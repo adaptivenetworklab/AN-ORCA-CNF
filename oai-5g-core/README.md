@@ -159,19 +159,3 @@
     * Component topology on 5G Core Network (KubeView)
     
     ![image](https://hackmd.io/_uploads/B1Khs95aT.png)
-
-* **Configuring PhpMyAdmin for Subscriber Management**
-    * Deploy the secret first
-    
-        ```
-        kubectl apply -f phypmyadmin/secret.yaml
-        ```
-    * Deploy the rest of the manifest
-    
-        ```
-        kubectl apply -f phypmyadmin/
-        ```
-    * PMA Dashboard
-    ![image](https://hackmd.io/_uploads/Syx8WFkYa.png)
-
-        Setup your custom credential in the core manifest configuration file.
