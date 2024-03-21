@@ -28,17 +28,17 @@ multus:
   netmask: "28"
     # if default route is not needed then leave the field empty
   defaultGateway: ""
-  hostInterface: "ens33"
+  hostInterface: "ens34"
 
 config:
   timeZone: "Asia/Jakarta"
-  rfSimServer: "192.168.1.5"    # ip-address of rfsim or service name oai-gnb or oai-du
-  fullImsi: "208950000000032"       # make sure all the below entries are present in the subscriber database
-  fullKey: "324a546fc7afce920ce50bacfe57dfc3" 
-  opc: "a9fd95b6c66d2169fd8a76c00f77d40a  "
+  rfSimServer: "192.168.1.2"    # ip-address of rfsim or service name oai-gnb or oai-du
+  fullImsi: "208990100001125"       # make sure all the below entries are present in the subscriber database
+  fullKey: "fec86ba6eb707ed08905757b1bb44b8g" 
+  opc: "c42449363bbad02b66d16bc975d77cc2"
   dnn: "oai"
   sst: "1"                     # configure according to gnb and amf, smf and upf 
-  sd: "FFFFFD"
+  sd: "27dc"
   usrp: "rfsim"            # allowed rfsim, b2xx, n3xx, x3xx
   useAdditionalOptions: "--sa --rfsim -r 106 --numerology 1 -C 3619200000 --nokrnmod --log_config.global_log_options level,nocolor,time"
 

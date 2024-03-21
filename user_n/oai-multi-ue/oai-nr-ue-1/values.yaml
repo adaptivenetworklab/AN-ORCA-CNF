@@ -25,10 +25,10 @@ imagePullSecrets:
 multus:
   create: true
   ipadd: "172.21.16.30"  # subnet should be able to reach the gNB
-  netmask: "22"
+  Netmask: "24"
     # if default route is not needed then leave the field empty
   defaultGateway: ""
-  hostInterface: "ens33"
+  hostInterface: "ens34"
 
 config:
   timeZone: "Asia/Jakarta"

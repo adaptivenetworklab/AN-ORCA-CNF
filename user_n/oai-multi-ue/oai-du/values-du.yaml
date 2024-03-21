@@ -18,12 +18,12 @@ multus:
   f1Interface:
     create: true
     IPadd: "172.21.16.100"
-    Netmask: "22"
-    hostInterface: "ens33"     
+    Netmask: "24"
+    hostInterface: "ens34"     
   ruInterface:            #Gak dibutuhkan karena tidak pakai RU/USRP
     create: false
     IPadd: "192.168.80.90"
-    Netmask: "24"
+    Netmask: "27"
     hostInterface: "bond0"      
 
 config:

@@ -39,7 +39,7 @@ multus:
   n3Interface:
     create: false
     Ipadd: "172.21.12.95"
-    Netmask: "22"
+    Netmask: "24"
     # #name inside the pod is hardcoded right now
     # name: "n3"
     ## If you do not have a gateway leave the field empty
@@ -50,7 +50,7 @@ multus:
   n4Interface:
     create: false
     Ipadd: "192.168.24.2"
-    Netmask: "24"
+    Netmask: "27"
     # #name inside the pod is hardcoded right now
     # name: "n4"
     ## If you do not have a gateway leave the field empty
@@ -63,7 +63,7 @@ multus:
     Ipadd: "192.168.22.2"
     # #name inside the pod is hardcoded right now
     # name: "n6"
-    Netmask: "24"
+    Netmask: "27"
     ## If you do not have a gateway leave the field empty
     Gateway: ""
     ## If you do not want to add any routes in your pod then leave this field empty

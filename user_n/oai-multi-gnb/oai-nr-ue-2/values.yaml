@@ -28,7 +28,7 @@ multus:
   netmask: "28"
     # if default route is not needed then leave the field empty
   defaultGateway: ""
-  hostInterface: "ens33"
+  hostInterface: "ens34"
 
 config:
   timeZone: "Asia/Jakarta"

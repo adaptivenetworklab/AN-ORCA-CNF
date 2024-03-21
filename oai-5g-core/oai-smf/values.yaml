@@ -42,7 +42,7 @@ multus:
   n4Interface:
     create: false
     Ipadd: "192.168.24.3"
-    Netmask: "24"
+    Netmask: "27"
     #name inside the pod is hardcoded right now
     #name: "n4"
     ## If you do not have a gateway leave the field empty

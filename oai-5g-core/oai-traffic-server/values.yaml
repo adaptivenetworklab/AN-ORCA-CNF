@@ -20,7 +20,7 @@ serviceAccount:
 multus:
   create: false
   IPadd: "172.21.6.99"
-  Netmask: "22"
+  Netmask: "24"
   defaultGateway: "172.21.7.254"
   hostInterface: "bond0"      # Interface of the host machine on which this pod will be scheduled
 

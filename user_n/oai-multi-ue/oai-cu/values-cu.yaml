@@ -18,20 +18,20 @@ multus:
   f1Interface: # konfigurasi f1 interface
     create: true # Diubah ke true, secara default false
     IPadd: "172.21.16.92" # Diubah ke custom IP (harus satu subnet)
-    Netmask: "22" # Diubah ke custom netmask (harus satu subnet)
-    hostInterface: "ens33"    # Define host interface pod
+    Netmask: "24" # Diubah ke custom netmask (harus satu subnet)
+    hostInterface: "ens34"    # Define host interface pod
 
   n2Interface: # konfigurasi n2 interface
     create: true # Diubah ke true, secara default false
     IPadd: "172.21.6.90" # Diubah ke custom IP (harus satu subnet)
-    Netmask: "22" # Diubah ke custom netmask (harus satu subnet)
-    hostInterface: "ens33"     # Define host interface pod
+    Netmask: "24" # Diubah ke custom netmask (harus satu subnet)
+    hostInterface: "ens34"     # Define host interface pod
 
   n3Interface: # konfigurasi n3 interface
     create: true  # Diubah ke true, secara default false
     IPadd: "172.21.8.91" # Diubah ke custom IP (harus satu subnet)
-    Netmask: "22" # Diubah ke custom netmask (harus satu subnet)
-    hostInterface: "ens33"    # Define host interface pod
+    Netmask: "24" # Diubah ke custom netmask (harus satu subnet)
+    hostInterface: "ens34"    # Define host interface pod
     
 config:
   mountConfig: true     # True aja karena config nya di mount     
