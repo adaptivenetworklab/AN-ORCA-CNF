@@ -19,7 +19,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "oai-cu-sa-mue"
+  name: ""
 # oai-cu can be configured with multiple interface which may correspond to 3GPP logical interfaces. There can be one to one or one to many. 
 # In case of one to one mapping f1, n2, n3 all can have seperate virtual interfaces. 
 # In one to many mapping f1,n2 and n3 all can be mapped to one virtual interface. 
@@ -68,6 +68,8 @@ config:
   useAdditionalOptions: "--sa --log_config.global_log_options level,nocolor,time"
   # If mounting the configuration file then below parameters are not used
   cuName: "oai-cu"
+  cuId: "0xe12"
+  cellId: "12345678N"
   mcc: "208"   # check the information with AMF, SMF, UPF
   mnc: "95"    # check the information with AMF, SMF, UPF
   tac: "0xa001"     # check the information with AMF

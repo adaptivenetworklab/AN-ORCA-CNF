@@ -19,7 +19,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "oai-cu-sa-user2"
+  name: ""
 
 # oai-cu can be configured with multiple interface which may correspond to 3GPP logical interfaces. There can be one to one or one to many. 
 # In case of one to one mapping f1, n2, n3 all can have seperate virtual interfaces. 
@@ -70,6 +70,7 @@ config:
   # If mounting the configuration file then below parameters are not used
   cuName: "oai-cu"
   cuId: "0xe04"
+  cellId: "12345678L"
   mcc: "208"   # check the information with AMF, SMF, UPF
   mnc: "99"    # check the information with AMF, SMF, UPF
   tac: "0xa001"     # check the information with AMF

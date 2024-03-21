@@ -19,7 +19,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "oai-du-sa-user2"
+  name: ""
 
 
 # oai-du helm-charts can be used in RFSimulated mode which does not require multiple interaces. 
@@ -61,6 +61,7 @@ config:
   gnbId: "0xe05"
   duName: "oai-du-rfsim"
   duId: "0xe06"
+  cellId: "12345678L"
   mcc: "208"   # check the information with AMF, SMF, UPF
   mnc: "99"    # check the information with AMF, SMF, UPF
   tac: "0xa001"     # check the information with AMF
