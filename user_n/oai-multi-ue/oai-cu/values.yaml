@@ -30,8 +30,8 @@ multus:
   defaultGateway: ""
   f1Interface:
     create: true
-    IPadd: "172.21.16.205"
-    Netmask: "24"
+    IPadd: "192.168.1.9"
+    Netmask: "28"
     # #name inside the pod is hardcoded right now
     # name: "f1"
     # if gatway is commented then it will be removed
@@ -40,7 +40,7 @@ multus:
     hostInterface: "ens34"      # Interface of the host machine on which this pod will be scheduled
   n2Interface:
     create: true
-    IPadd: "172.21.6.81"
+    IPadd: "172.21.6.100"
     #name inside the pod is hardcoded right now
     # name: "n2"
     Netmask: "24"
@@ -50,7 +50,7 @@ multus:
     hostInterface: "ens34"      # Interface of the host machine on which this pod will be scheduled
   n3Interface:
     create: true
-    IPadd: "172.21.8.80"
+    IPadd: "172.21.8.100"
     Netmask: "24"
     # #name inside the pod is hardcoded right now
     # name: "n3"
@@ -69,9 +69,9 @@ config:
   # If mounting the configuration file then below parameters are not used
   cuName: "oai-cu"
   cuId: "0xe12"
-  cellId: "12345678N"
+  cellId: "12345678L"
   mcc: "208"   # check the information with AMF, SMF, UPF
-  mnc: "95"    # check the information with AMF, SMF, UPF
+  mnc: "99"    # check the information with AMF, SMF, UPF
   tac: "0xa001"     # check the information with AMF
   sst: "1"  #currently only 4 standard values are allowed 1,2,3,4
   amfhost: "172.21.6.94"  # amf ip-address or service-name oai-amf-svc or 172.21.6.94

@@ -61,9 +61,9 @@ config:
   gnbId: "0xe08"
   duName: "oai-du-rfsim-1"
   duId: "0xe09"
-  cellId: "12345678M"
+  cellId: "12345678L"
   mcc: "208"   # check the information with AMF, SMF, UPF
-  mnc: "95"    # check the information with AMF, SMF, UPF
+  mnc: "99"    # check the information with AMF, SMF, UPF
   tac: "0xa001"     # check the information with AMF
   sst: "1"  #currently only 4 standard values are allowed 1,2,3,4
   usrp: rfsim   #allowed values rfsim, b2xx, n3xx or x3xx

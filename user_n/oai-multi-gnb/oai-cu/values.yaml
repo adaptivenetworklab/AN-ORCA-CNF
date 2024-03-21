@@ -70,9 +70,9 @@ config:
   # If mounting the configuration file then below parameters are not used
   cuName: "oai-cu"
   cuId: "0xe07"
-  cellId: "12345678M"
+  cellId: "12345678L"
   mcc: "208"   # check the information with AMF, SMF, UPF
-  mnc: "95"    # check the information with AMF, SMF, UPF
+  mnc: "99"    # check the information with AMF, SMF, UPF
   tac: "0xa001"     # check the information with AMF
   sst: "1"  #currently only 4 standard values are allowed 1,2,3,4
   amfhost: "172.21.6.94"  # amf ip-address or service-name oai-amf-svc or 172.21.6.94
