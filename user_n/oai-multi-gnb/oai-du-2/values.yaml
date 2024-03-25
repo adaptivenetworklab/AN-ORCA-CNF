@@ -59,9 +59,9 @@ config:
   timeZone: "Asia/Jakarta"
   useAdditionalOptions: "--sa --rfsim -r 106 --numerology 1 -C 3619200000 --nokrnmod --log_config.global_log_options level,nocolor,time"
   gnbId: "0xe10"
-  duName: "oai-du-rfsim-2"
+  duName: "oai-du-rfsim"
   duId: "0xe11"
-  cellId: "12345678L"
+  cellId: "12345677L"
   mcc: "208"   # check the information with AMF, SMF, UPF
   mnc: "99"    # check the information with AMF, SMF, UPF
   tac: "0xa001"     # check the information with AMF

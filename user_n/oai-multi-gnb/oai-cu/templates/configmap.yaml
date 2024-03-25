@@ -23,7 +23,7 @@ data:
 
           // Tracking area code, 0x0000 and 0xfffe are reserved values
           tracking_area_code  = {{ .Values.config.tac}};
-          plmn_list = ({ mcc = {{ .Values.config.mcc}}; mnc = {{ .Values.config.mnc}}; mnc_length = 2; snssaiList = ({ sst = {{ .Values.config.sst}}; {{ .Values.config.sd}} }) });
+          plmn_list = ({ mcc = {{ .Values.config.mcc}}; mnc = {{ .Values.config.mnc}}; mnc_length = 2; snssaiList = ({ sst = {{ .Values.config.sst}}; }) });
 
           nr_cellid = {{ .Values.config.cellId}};
 
@@ -31,11 +31,20 @@ data:
 
           local_s_if_name = "{{ .Values.config.f1IfName}}";
           local_s_address = "{{ .Values.multus.f1Interface.IPadd}}";
-          remote_s_address = "127.0.0.1";
           local_s_portc   = 501;
           local_s_portd   = {{ .Values.config.f1cuPort}};
-          remote_s_portc  = 500;
-          remote_s_portd  = {{ .Values.config.f1duPort}};
+          
+          DU_1 = {
+            remote_s_address ="{{ .Values.config.du1host}}";
+            remote_s_portc  = 500;
+            remote_s_portd  = {{ .Values.config.f1duPort}};
+          };
+
+          DU_2 = {
+            remote_s_address = "{{ .Values.config.du2host}}";
+            remote_s_portc  = 502;
+            remote_s_portd  = {{ .Values.config.f1duPort}};
+          };
 
           # ------- SCTP definitions
           SCTP :

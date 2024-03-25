@@ -76,6 +76,8 @@ config:
   tac: "0xa001"     # check the information with AMF
   sst: "1"  #currently only 4 standard values are allowed 1,2,3,4
   amfhost: "172.21.6.94"  # amf ip-address or service-name oai-amf-svc or 172.21.6.94
+  du1host: "192.168.1.5"
+  du2host: "192.168.1.6"
   n2IfName: "n2"    # if multus.n2Interface.create is true then use n2
   n3IfName: "n3"   #if multus.n3Interface.create is true then use n3 or you can only use 1 interface n2 or eth0 
   f1IfName: "f1"   #if multus.f1Interface.create is true then use multus.f1Interface.Ipadd
