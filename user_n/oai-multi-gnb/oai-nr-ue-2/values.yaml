@@ -28,7 +28,7 @@ multus:
   netmask: "28"
     # if default route is not needed then leave the field empty
   defaultGateway: ""
-  hostInterface: "ens34"
+  hostInterface: "ens33"
 
 config:
   timeZone: "Asia/Jakarta"
@@ -86,4 +86,4 @@ terminationGracePeriodSeconds: 0
 
 nodeSelector: {}
 
-nodeName: node3
+# nodeName: node3

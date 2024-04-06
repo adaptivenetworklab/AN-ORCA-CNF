@@ -52,7 +52,7 @@ oai-amf:
       routes: 
       hostInterface: "ens34" # Interface of the host machine on which this pod will be scheduled
   nodeSelector: {}
-  nodeName: node2
+  # nodeName: node2
 oai-upf:
   enabled: true
   kubernetesType: Vanilla #Openshift/Vanilla Vanilla for Upstream Kubernetes
@@ -151,4 +151,4 @@ oai-smf:
   imagePullSecrets:
     - name: "regcred"
   nodeSelector: {}
-  nodeName: node2
+  # nodeName: node2
