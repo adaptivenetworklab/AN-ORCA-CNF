@@ -52,7 +52,7 @@ while true; do
             ;;
         5)
             # Upgrade Core Network
-            helm upgrade basic /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/oai-5g-core/ -n core-network
+            helm upgrade basic /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/oai-5g-core/oai-5g-basic/ -n core-network
             echo "Core network upgraded."
             echo
             ;;

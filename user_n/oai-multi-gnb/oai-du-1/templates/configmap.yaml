@@ -35,7 +35,7 @@ data:
           {
        #spCellConfigCommon
 
-            physCellId                                                    = 0;
+            physCellId                                                    = {{ .Values.config.phyCellId}};
 
       #  downlinkConfigCommon
           #frequencyInfoDL

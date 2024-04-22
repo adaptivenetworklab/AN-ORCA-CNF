@@ -62,6 +62,7 @@ config:
   duName: "oai-du-rfsim"
   duId: "0xe09"
   cellId: "12345678L"
+  phyCellId: "0"
   mcc: "208"   # check the information with AMF, SMF, UPF
   mnc: "99"    # check the information with AMF, SMF, UPF
   tac: "0xa001"     # check the information with AMF
