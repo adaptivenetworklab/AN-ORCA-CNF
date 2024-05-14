@@ -131,8 +131,8 @@ oai-upf:
     ## For n4 it is better to re-use eth0 interface inside the pod (primary CNI of Kubernetes)
     n4Interface:
       create: true
-      Ipadd: "192.168.7.2"
-      Netmask: "27"
+      Ipadd: "192.168.1.2"
+      Netmask: "28"
       # #name inside the pod is hardcoded right now
       # name: "n4"
       ## If you do not have a gateway leave the field empty
@@ -188,8 +188,8 @@ oai-smf:
     defaultGateway: ""
     n4Interface:
       create: true
-      Ipadd: "192.168.7.4"
-      Netmask: "27"
+      Ipadd: "192.168.1.4"
+      Netmask: "28"
       ## If you do not have a gateway leave the field empty
       Gateway: 
       ## If you do not want to add any routes in your pod then leave this field empty
