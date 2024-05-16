@@ -20,7 +20,7 @@
 ################################################################################
 
 apiVersion: v2
-name: oai-cu
+name: oai-cu-level1
 description: A Helm chart for cu network function
 
 # A chart can be either an 'application' or a 'library' chart.

@@ -33,20 +33,20 @@ while true; do
             ;;
         3)
             # Install gNB to UE (MDU)
-            helm install oai-cu-mdu /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-cu/ -n user-n
-            helm install oai-du-mdu-1 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-du-1/ -n user-n
-            helm install oai-du-mdu-2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-du-2/ -n user-n
-            helm install oai-nr-ue-mdu-1 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-nr-ue-1/ -n user-n
-            helm install oai-nr-ue-mdu-2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-nr-ue-2/ -n user-n
+            helm install oai-cu-level2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-cu/ -n user-n
+            helm install oai-du1-level2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-du-1/ -n user-n
+            helm install oai-du2-level2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-du-2/ -n user-n
+            helm install oai-nr-ue1-level2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-nr-ue-1/ -n user-n
+            helm install oai-nr-ue2-level2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-nr-ue-2/ -n user-n
             echo "gNB to UE (MDU) installed."
             echo
             ;;
         4)
             # Install gNB to UE (MUE)
-            helm install oai-cu-mue /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-cu/ -n user-n
-            helm install oai-du-mue /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-du/ -n user-n
-            helm install oai-nr-ue-mue-1 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-nr-ue-1/ -n user-n
-            helm install oai-nr-ue-mue-2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-nr-ue-2/ -n user-n
+            helm install oai-cu-level3 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-cu/ -n user-n
+            helm install oai-du-level3 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-du/ -n user-n
+            helm install oai-nr-ue1-level3 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-nr-ue-1/ -n user-n
+            helm install oai-nr-ue2-level3 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-nr-ue-2/ -n user-n
             echo "gNB to UE (MUE) installed."
             echo
             ;;
@@ -66,20 +66,20 @@ while true; do
             ;;
         7)
             # Upgrade gNB to UE (MDU)
-            helm upgrade oai-cu-mdu /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-cu/ -n user-n
-            helm upgrade oai-du-mdu-1 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-du-1/ -n user-n
-            helm upgrade oai-du-mdu-2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-du-2/ -n user-n
-            helm upgrade oai-nr-ue-mdu-1 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-nr-ue-1/ -n user-n
-            helm upgrade oai-nr-ue-mdu-2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-nr-ue-2/ -n user-n
+            helm upgrade oai-cu-level2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-cu/ -n user-n
+            helm upgrade oai-du1-level2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-du-1/ -n user-n
+            helm upgrade oai-du2-level2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-du-2/ -n user-n
+            helm upgrade oai-nr-ue1-level2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-nr-ue-1/ -n user-n
+            helm upgrade oai-nr-ue2-level2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-gnb/oai-nr-ue-2/ -n user-n
             echo "gNB to UE (MDU) upgraded."
             echo
             ;;
         8)
             # Upgrade gNB to UE (MUE)
-            helm upgrade oai-cu-mue /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-cu/ -n user-n
-            helm upgrade oai-du-mue /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-du/ -n user-n
-            helm upgrade oai-nr-ue-mue-1 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-nr-ue-1/ -n user-n
-            helm upgrade oai-nr-ue-mue-2 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-nr-ue-2/ -n user-n
+            helm upgrade oai-cu-level3 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-cu/ -n user-n
+            helm upgrade oai-du-level3 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-du/ -n user-n
+            helm upgrade oai-nr-ue1-level3 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-nr-ue-1/ -n user-n
+            helm upgrade oai-nr-ue2-level3 /home/rafli/vnf-netra/AN-OPEN-NETRA-VNF/user_n/oai-multi-ue/oai-nr-ue-2/ -n user-n
             echo "gNB to UE (MUE) upgraded."
             echo
             ;;
@@ -99,20 +99,20 @@ while true; do
             ;;
         11)
             # Uninstall gNB to UE (MDU)
-            helm uninstall oai-cu-mdu -n user-n
-            helm uninstall oai-du-mdu-1 -n user-n
-            helm uninstall oai-du-mdu-2 -n user-n
-            helm uninstall oai-nr-ue-mdu-1 -n user-n
-            helm uninstall oai-nr-ue-mdu-2 -n user-n
+            helm uninstall oai-cu-level2 -n user-n
+            helm uninstall oai-du1-level2 -n user-n
+            helm uninstall oai-du2-level2 -n user-n
+            helm uninstall oai-nr-ue1-level2 -n user-n
+            helm uninstall oai-nr-ue2-level2 -n user-n
             echo "gNB to UE (MDU) uninstalled."
             echo
             ;;
         12)
             # Uninstall gNB to UE (MUE)
-            helm uninstall oai-cu-mue -n user-n
-            helm uninstall oai-du-mue -n user-n
-            helm uninstall oai-nr-ue-mue-1 -n user-n
-            helm uninstall oai-nr-ue-mue-2 -n user-n
+            helm uninstall oai-cu-level3 -n user-n
+            helm uninstall oai-du-level3 -n user-n
+            helm uninstall oai-nr-ue1-level3 -n user-n
+            helm uninstall oai-nr-ue2-level3 -n user-n
             echo "gNB to UE (MUE) uninstalled."
             echo
             ;;
