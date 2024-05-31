@@ -8,8 +8,9 @@ nfimage:
   #pullPolicy: IfNotPresent or Never or Always
   pullPolicy: IfNotPresent
 
-imagePullSecrets: 
-  - name: "regcred"
+imagePullSecrets:
+    name: "quay-registry-secret"
+    dockerconfigjson: "eyJhdXRocyI6eyJxdWF5LnRpcGxhYi5sb2NhbCI6eyJ1c2VybmFtZSI6InJhZmxpIiwicGFzc3dvcmQiOiJDYXBzdG9uZTIwMjMiLCJhdXRoIjoiY21GbWJHazZRMkZ3YzNSdmJtVXlNREl6In19fQ=="
 
 serviceAccount:
   # Specifies whether a service account should be created
