@@ -3,7 +3,7 @@ kubernetesType: Vanilla  #Vanilla for community kubernetes distribution else Ope
 ## In case of using these charts on Openshift then please use UBI images
 ## To know more about them follow this tutorial https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed/-/tree/master/openshift
 nfimage:
-  repository: docker.io/oaisoftwarealliance/oai-nr-ue           # dockehub oaisoftwarealliance/oai-nr-ue
+  repository: quay.tiplab.local/orca/oai-nr-ue       # dockehub oaisoftwarealliance/oai-nr-ue
   version: 2023.w49 # image tag or develop 
   # pullPolicy: IfNotPresent or Never or Always
   pullPolicy: IfNotPresent
@@ -19,7 +19,8 @@ serviceAccount:
 
 # good to use when pulling images from docker-hub mention 
 imagePullSecrets: 
- - name: "regcred"
+  name: "quay-registry-secret"
+  dockerconfigjson: "eyJhdXRocyI6eyJxdWF5LnRpcGxhYi5sb2NhbCI6eyJ1c2VybmFtZSI6InJhZmxpIiwicGFzc3dvcmQiOiJDYXBzdG9uZTIwMjMiLCJhdXRoIjoiY21GbWJHazZRMkZ3YzNSdmJtVXlNREl6In19fQ=="
 
 ## Change these ip-addresses according to your environment
 multus:
