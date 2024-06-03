@@ -121,4 +121,4 @@ terminationGracePeriodSeconds: 5
 
 nodeSelector: {}
 
-# nodeName: node3
+nodeName: node2
