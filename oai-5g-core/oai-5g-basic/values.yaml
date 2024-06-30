@@ -9,8 +9,7 @@ mysql:
   imagePullPolicy: IfNotPresent
   oai5gdatabase: basic
   imagePullSecrets:
-    name: "quay-registry-secret"
-    dockerconfigjson: "eyJhdXRocyI6eyJxdWF5LnRpcGxhYi5sb2NhbCI6eyJ1c2VybmFtZSI6InJhZmxpIiwicGFzc3dvcmQiOiJDYXBzdG9uZTIwMjMiLCJhdXRoIjoiY21GbWJHazZRMkZ3YzNSdmJtVXlNREl6In19fQ=="
+    - name: "regcred"
   persistence:
     enabled: true
   # nodeName: node3
@@ -24,8 +23,7 @@ oai-nrf:
     pullPolicy: IfNotPresent
   includeTcpDumpContainer: false #only for taking pcaps inside network function pod
   imagePullSecrets:
-    name: "quay-registry-secret"
-    dockerconfigjson: "eyJhdXRocyI6eyJxdWF5LnRpcGxhYi5sb2NhbCI6eyJ1c2VybmFtZSI6InJhZmxpIiwicGFzc3dvcmQiOiJDYXBzdG9uZTIwMjMiLCJhdXRoIjoiY21GbWJHazZRMkZ3YzNSdmJtVXlNREl6In19fQ=="
+    - name: "regcred"
   config:
     logLevel: "debug"   #allowed info/error/debug
   nodeSelector: {}
@@ -40,8 +38,7 @@ oai-udr:
     pullPolicy: IfNotPresent
   includeTcpDumpContainer: false #only for taking pcaps inside network function pod
   imagePullSecrets:
-    name: "quay-registry-secret"
-    dockerconfigjson: "eyJhdXRocyI6eyJxdWF5LnRpcGxhYi5sb2NhbCI6eyJ1c2VybmFtZSI6InJhZmxpIiwicGFzc3dvcmQiOiJDYXBzdG9uZTIwMjMiLCJhdXRoIjoiY21GbWJHazZRMkZ3YzNSdmJtVXlNREl6In19fQ=="
+    - name: "regcred"
   config:
     logLevel: "debug"   #allowed info/error/debug
   nodeSelector: {}
@@ -56,8 +53,7 @@ oai-udm:
     pullPolicy: IfNotPresent
   includeTcpDumpContainer: false #only for taking pcaps inside network function pod
   imagePullSecrets:
-    name: "quay-registry-secret"
-    dockerconfigjson: "eyJhdXRocyI6eyJxdWF5LnRpcGxhYi5sb2NhbCI6eyJ1c2VybmFtZSI6InJhZmxpIiwicGFzc3dvcmQiOiJDYXBzdG9uZTIwMjMiLCJhdXRoIjoiY21GbWJHazZRMkZ3YzNSdmJtVXlNREl6In19fQ=="
+    - name: "regcred"
   config:
     logLevel: "debug"   #allowed info/error/debug
   nodeSelector: {}
@@ -72,8 +68,7 @@ oai-ausf:
     pullPolicy: IfNotPresent
   includeTcpDumpContainer: false #only for taking pcaps inside network function pod
   imagePullSecrets:
-    name: "quay-registry-secret"
-    dockerconfigjson: "eyJhdXRocyI6eyJxdWF5LnRpcGxhYi5sb2NhbCI6eyJ1c2VybmFtZSI6InJhZmxpIiwicGFzc3dvcmQiOiJDYXBzdG9uZTIwMjMiLCJhdXRoIjoiY21GbWJHazZRMkZ3YzNSdmJtVXlNREl6In19fQ=="
+    - name: "regcred"
   config:
     logLevel: "debug"   #allowed info/error/debug
   nodeSelector: {}
@@ -88,8 +83,7 @@ oai-amf:
     pullPolicy: IfNotPresent
   includeTcpDumpContainer: false #only for taking pcaps inside network function pod
   imagePullSecrets:
-    name: "quay-registry-secret"
-    dockerconfigjson: "eyJhdXRocyI6eyJxdWF5LnRpcGxhYi5sb2NhbCI6eyJ1c2VybmFtZSI6InJhZmxpIiwicGFzc3dvcmQiOiJDYXBzdG9uZTIwMjMiLCJhdXRoIjoiY21GbWJHazZRMkZ3YzNSdmJtVXlNREl6In19fQ=="
+    - name: "regcred"
   multus:
     ## If you don't want to add a default route in your pod then replace this field with ""
     defaultGateway: ""
@@ -116,8 +110,7 @@ oai-upf:
     pullPolicy: IfNotPresent
   includeTcpDumpContainer: false #only for taking pcaps inside network function pod
   imagePullSecrets:
-    name: "quay-registry-secret"
-    dockerconfigjson: "eyJhdXRocyI6eyJxdWF5LnRpcGxhYi5sb2NhbCI6eyJ1c2VybmFtZSI6InJhZmxpIiwicGFzc3dvcmQiOiJDYXBzdG9uZTIwMjMiLCJhdXRoIjoiY21GbWJHazZRMkZ3YzNSdmJtVXlNREl6In19fQ=="
+    - name: "regcred"
   # create an extra interface for N3 incase the gNB is outside the cluster network or there is a need to have dedicated interface for N3
   ## Change these ip-addresses according to your environment
   ## N4, N6 are optional only if you want that UPF uses different subnets for different 3gpp interfaces. 
@@ -204,7 +197,6 @@ oai-smf:
       hostInterface: "ens34"
   nodeSelector: {}
   imagePullSecrets:
-    name: "quay-registry-secret"
-    dockerconfigjson: "eyJhdXRocyI6eyJxdWF5LnRpcGxhYi5sb2NhbCI6eyJ1c2VybmFtZSI6InJhZmxpIiwicGFzc3dvcmQiOiJDYXBzdG9uZTIwMjMiLCJhdXRoIjoiY21GbWJHazZRMkZ3YzNSdmJtVXlNREl6In19fQ=="
+    - name: "regcred"
   nodeSelector: {}
   # nodeName: node3
