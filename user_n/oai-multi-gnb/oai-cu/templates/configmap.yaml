@@ -31,14 +31,11 @@ data:
 
           local_s_if_name = "{{ .Values.config.f1IfName}}";
           local_s_address = "{{ .Values.multus.f1Interface.IPadd}}";
+          remote_s_address = "0.0.0.0";
           local_s_portc   = 501;
           local_s_portd   = {{ .Values.config.f1cuPort}};
-          remote_s_address_1 ="{{ .Values.config.du1host}}";
-          remote_s_portc_1  = 500;
-          remote_s_portd_1  = {{ .Values.config.f1duPort}};
-          remote_s_address_2 = "{{ .Values.config.du2host}}";
-          remote_s_portc_2  = 502;
-          remote_s_portd_2  = {{ .Values.config.f1duPort}};
+          remote_s_portc  = 500;
+          remote_s_portd  = {{ .Values.config.f1duPort}};
 
           # ------- SCTP definitions
           SCTP :

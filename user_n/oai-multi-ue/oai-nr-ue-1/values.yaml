@@ -34,9 +34,9 @@ multus:
 config:
   timeZone: "Asia/Jakarta"
   rfSimServer: "192.168.1.10"    # ip-address of rfsim or service name oai-gnb or oai-du
-  fullImsi: "208990100001101"       # make sure all the below entries are present in the subscriber database
-  fullKey: "a92d71ed92f43ebae1720f34fd2e6966" 
-  opc: "C42449363BBAD02B66D16BC975D77CC1"
+  fullImsi: "208990000000101"       # make sure all the below entries are present in the subscriber database
+  fullKey: "fec86ba6eb707ed08905757b1bb44b8g" 
+  opc: "C42449363BBAD02B66D16BC975D77CC2"
   dnn: "oai"
   sst: "1"                     # configure according to gnb and amf, smf and upf 
   sd: "FFFFF4"

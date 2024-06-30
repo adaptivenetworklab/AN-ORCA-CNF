@@ -25,22 +25,21 @@ imagePullSecrets:
 ## Change these ip-addresses according to your environment
 multus:
   create: true
-  ipadd: "192.168.1.8"  # subnet should be able to reach the gNB
+  ipadd: "192.168.1.8"
   netmask: "28"
-    # if default route is not needed then leave the field empty
   defaultGateway: ""
   hostInterface: "ens33"
 
 config:
   timeZone: "Asia/Jakarta"
   rfSimServer: "192.168.1.7"    # ip-address of rfsim or service name oai-gnb or oai-du
-  fullImsi: "208990000000101"       # make sure all the below entries are present in the subscriber database
-  fullKey: "fec86ba6eb707ed08905757b1bb44b8g" 
-  opc: "C42449363BBAD02B66D16BC975D77CC2"
+  fullImsi: "208990000000102"       # make sure all the below entries are present in the subscriber database
+  fullKey: "fec86ba6eb707ed08905757b1bb44b8h" 
+  opc: "C42449363BBAD02B66D16BC975D77CC3"
   dnn: "oai"
-  sst: "1"                     # configure according to gnb and amf, smf and upf 
+  sst: "1"                     
   sd: "FFFFFF"
-  usrp: "rfsim"            # allowed rfsim, b2xx, n3xx, x3xx
+  usrp: "rfsim"            
   useAdditionalOptions: "--sa --rfsim -r 106 --numerology 1 -C 3619200000 --nokrnmod --log_config.global_log_options level,nocolor,time"
 
 podSecurityContext:
@@ -49,7 +48,7 @@ podSecurityContext:
 
 start:
   nrue: true
-  tcpdump: false  # if false then started in sleep mode else it will start capturing packets, nr ue will have a lot of packets per sec better avoid this or add a filter in the deployment.yaml
+  tcpdump: false  
 
 includeTcpDumpContainer: false #If true it will add a tcpdump container inside network function pod for debugging
 

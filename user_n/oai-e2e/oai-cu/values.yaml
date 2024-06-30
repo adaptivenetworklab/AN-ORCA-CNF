@@ -17,17 +17,17 @@ multus:
   defaultGateway: ""
   f1Interface:
     create: true
-    IPadd: "192.168.1.1"
+    IPadd: "192.168.1.73"
     Netmask: "28"
     hostInterface: "ens33"     
   n2Interface:
     create: true
-    IPadd: "172.21.6.90"
+    IPadd: "172.21.6.99"
     Netmask: "24"
     hostInterface: "ens34"      
   n3Interface:
     create: true
-    IPadd: "172.21.8.90"
+    IPadd: "172.21.8.99"
     Netmask: "24"
     hostInterface: "ens34"      
 
@@ -36,7 +36,7 @@ config:
   timeZone: "Asia/Jakarta"
   useAdditionalOptions: "--sa --log_config.global_log_options level,nocolor,time"
   cuName: "oai-cu"
-  cuId: "0xe04"
+  cuId: "0xe10"
   cellId: "12345678L"
   mcc: "208"   
   mnc: "99"    

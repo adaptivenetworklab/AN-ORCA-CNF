@@ -178,7 +178,7 @@ data:
           local_n_if_name = "{{ .Values.config.f1IfName}}";
           local_n_address = "{{ .Values.multus.f1Interface.IPadd}}";
           remote_n_address = "{{ .Values.config.cuHost}}";
-          local_n_portc   = 502;
+          local_n_portc   = 500;
           local_n_portd   = {{ .Values.config.f1duPort}};
           remote_n_portc  = 501;
           remote_n_portd  = {{ .Values.config.f1cuPort}};
