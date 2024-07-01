@@ -12,7 +12,8 @@ mysql:
     - name: "regcred"
   persistence:
     enabled: true
-  # nodeName: node3
+  nodeSelector: {}
+  nodeName: node2
 oai-nrf:
   enabled: true
   kubernetesType: Vanilla #Openshift/Vanilla Vanilla for Upstream Kubernetes
@@ -27,7 +28,7 @@ oai-nrf:
   config:
     logLevel: "debug"   #allowed info/error/debug
   nodeSelector: {}
-  # nodeName: node3
+  nodeName: node2
 oai-udr:
   enabled: true
   kubernetesType: Vanilla #Openshift/Vanilla Vanilla for Upstream Kubernetes
@@ -42,7 +43,7 @@ oai-udr:
   config:
     logLevel: "debug"   #allowed info/error/debug
   nodeSelector: {}
-  # nodeName: node3
+  nodeName: node2
 oai-udm:
   enabled: true
   kubernetesType: Vanilla #Openshift/Vanilla Vanilla for Upstream Kubernetes
@@ -57,7 +58,7 @@ oai-udm:
   config:
     logLevel: "debug"   #allowed info/error/debug
   nodeSelector: {}
-  # nodeName: node3
+  nodeName: node2
 oai-ausf:
   enabled: true
   kubernetesType: Vanilla #Openshift/Vanilla Vanilla for Upstream Kubernetes
@@ -72,7 +73,7 @@ oai-ausf:
   config:
     logLevel: "debug"   #allowed info/error/debug
   nodeSelector: {}
-  # nodeName: node3
+  nodeName: node2
 oai-amf:
   enabled: true
   kubernetesType: Vanilla #Openshift/Vanilla Vanilla for Upstream Kubernetes
@@ -99,7 +100,7 @@ oai-amf:
       routes: 
       hostInterface: "ens34" # Interface of the host machine on which this pod will be scheduled
   nodeSelector: {}
-  # nodeName: node3
+  nodeName: node2
 oai-upf:
   enabled: true
   kubernetesType: Vanilla #Openshift/Vanilla Vanilla for Upstream Kubernetes
@@ -153,7 +154,7 @@ oai-upf:
       hostInterface: "ens34"
   #NOTE: If the interface you selected for n6If is wrong then traffic will not be routed towards internet
   nodeSelector: {}
-  # nodeName: node3
+  nodeName: node2
 # oai-traffic-server:
 #  enabled: false
 #  weight: 6
@@ -199,4 +200,4 @@ oai-smf:
   imagePullSecrets:
     - name: "regcred"
   nodeSelector: {}
-  # nodeName: node3
+  nodeName: node2

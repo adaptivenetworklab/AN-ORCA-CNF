@@ -1,0 +1,16 @@
+apiVersion: v2
+appVersion: v2.0.0
+description: A Helm chart for UPF as network function
+icon: http://www.openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
+keywords:
+- 5G
+- UPF
+maintainers:
+- email: contact@openairinterface.org
+  name: OPENAIRINTERFACE
+name: oai-upf
+sources:
+- https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed
+- https://openairinterface.org/
+type: application
+version: v2.0.0
