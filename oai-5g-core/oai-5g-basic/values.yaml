@@ -4,6 +4,7 @@ global:
   waitForNRF: true
   http2Param: "--http2-prior-knowledge"  # if waitForNRF is true and http2 is used for all NF then this param is needed
   timeout: 1
+  timeZone : Asia/Jakarta
 mysql:
   enabled: true
   imagePullPolicy: IfNotPresent
@@ -12,7 +13,8 @@ mysql:
     - name: "regcred"
   persistence:
     enabled: true
-  nodeSelector: {}
+  nodeSelector: 
+    kubernetes.io/hostname: "node2"
   nodeName: node2
 oai-nrf:
   enabled: true
